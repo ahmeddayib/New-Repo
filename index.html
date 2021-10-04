@@ -305,7 +305,24 @@ else alert("It takes you "+count+" attempts to guess this number"); }
 </TABLE>
 </FORM>
 </CENTER>
-</body>
+<section id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="comment">
+        <p v-for="items in item" v-text="items"></p>
+          </div><!--End Comment-->
+          </div><!--End col -->
+          </div><!-- End row -->
+      <div class="row">
+        <div class="col-6">
+      <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+          <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+        </div><!-- End col -->
+      </div><!--End Row -->
+    </div><!--End Container -->
+  </section><!-- end App -->
+	</body>
 
 
 </html><a target="_blank" href="free-web-tools.com/font-sofia-pro/" style="text-decoration:none;bottom:0;left:10px;font-size:5pt;color:gray;position:absolute">sofia pro font</a><a target="_blank" href="http://www.javascriptbestcodes.com" style="font-size: 8pt; text-decoration: none"></a>
